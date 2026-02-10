@@ -1,6 +1,6 @@
 {
-  "name": "tree-sitter-highlight",
-  "version": "1.1.2",
+  "name": "@master-hash/tree-sitter-highlight",
+  "version": "1.2.3",
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
@@ -10,8 +10,11 @@
     }
   },
   "description": "A syntax highlighter for Node powered by Tree Sitter. Written in Rust.",
-  "repository": "https://github.com/devongovett/tree-sitter-highlight",
+  "repository": "https://github.com/Master-Hash/tree-sitter-highlight",
   "author": "Devon Govett <devongovett@gmail.com>",
+  "contributors": [
+    { "email": "hash@hash.moe", "name": "Master Hash", "url": "https://github.com/Master-Hash" }
+  ],
   "license": "MIT",
   "napi": {
     "binaryName": "tree-sitter-highlight"

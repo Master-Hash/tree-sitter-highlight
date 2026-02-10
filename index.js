@@ -78,10 +78,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-android-arm64')
-        const bindingPackageVersion = require('tree-sitter-highlight-android-arm64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-android-arm64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-android-arm64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -94,10 +94,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-android-arm-eabi')
-        const bindingPackageVersion = require('tree-sitter-highlight-android-arm-eabi/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-android-arm-eabi')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-android-arm-eabi/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -115,10 +115,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-win32-x64-gnu')
-        const bindingPackageVersion = require('tree-sitter-highlight-win32-x64-gnu/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-win32-x64-gnu')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-win32-x64-gnu/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -131,10 +131,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-win32-x64-msvc')
-        const bindingPackageVersion = require('tree-sitter-highlight-win32-x64-msvc/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-win32-x64-msvc')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-win32-x64-msvc/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -148,10 +148,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-win32-ia32-msvc')
-        const bindingPackageVersion = require('tree-sitter-highlight-win32-ia32-msvc/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-win32-ia32-msvc')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-win32-ia32-msvc/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -164,10 +164,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-win32-arm64-msvc')
-        const bindingPackageVersion = require('tree-sitter-highlight-win32-arm64-msvc/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-win32-arm64-msvc')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-win32-arm64-msvc/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -183,10 +183,10 @@ function requireNative() {
       loadErrors.push(e)
     }
     try {
-      const binding = require('tree-sitter-highlight-darwin-universal')
-      const bindingPackageVersion = require('tree-sitter-highlight-darwin-universal/package.json').version
-      if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-        throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+      const binding = require('@master-hash/tree-sitter-highlight-darwin-universal')
+      const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-darwin-universal/package.json').version
+      if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+        throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
       }
       return binding
     } catch (e) {
@@ -199,10 +199,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-darwin-x64')
-        const bindingPackageVersion = require('tree-sitter-highlight-darwin-x64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-darwin-x64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-darwin-x64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -215,10 +215,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-darwin-arm64')
-        const bindingPackageVersion = require('tree-sitter-highlight-darwin-arm64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-darwin-arm64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-darwin-arm64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -235,10 +235,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-freebsd-x64')
-        const bindingPackageVersion = require('tree-sitter-highlight-freebsd-x64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-freebsd-x64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-freebsd-x64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -251,10 +251,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-freebsd-arm64')
-        const bindingPackageVersion = require('tree-sitter-highlight-freebsd-arm64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-freebsd-arm64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-freebsd-arm64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -272,10 +272,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-x64-musl')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-x64-musl/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-x64-musl')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-x64-musl/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -288,10 +288,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-x64-gnu')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-x64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-x64-gnu')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-x64-gnu/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -306,10 +306,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-arm64-musl')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-arm64-musl/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-arm64-musl')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-arm64-musl/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -322,10 +322,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-arm64-gnu')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-arm64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-arm64-gnu')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-arm64-gnu/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -340,10 +340,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-arm-musleabihf')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-arm-musleabihf/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-arm-musleabihf')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-arm-musleabihf/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -356,10 +356,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-arm-gnueabihf')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-arm-gnueabihf/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-arm-gnueabihf')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-arm-gnueabihf/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -374,10 +374,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-loong64-musl')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-loong64-musl/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-loong64-musl')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-loong64-musl/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -390,10 +390,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-loong64-gnu')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-loong64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-loong64-gnu')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-loong64-gnu/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -408,10 +408,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-riscv64-musl')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-riscv64-musl/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-riscv64-musl')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-riscv64-musl/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -424,10 +424,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('tree-sitter-highlight-linux-riscv64-gnu')
-          const bindingPackageVersion = require('tree-sitter-highlight-linux-riscv64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@master-hash/tree-sitter-highlight-linux-riscv64-gnu')
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-riscv64-gnu/package.json').version
+          if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -441,10 +441,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-linux-ppc64-gnu')
-        const bindingPackageVersion = require('tree-sitter-highlight-linux-ppc64-gnu/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-linux-ppc64-gnu')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-ppc64-gnu/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -457,10 +457,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-linux-s390x-gnu')
-        const bindingPackageVersion = require('tree-sitter-highlight-linux-s390x-gnu/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-linux-s390x-gnu')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-linux-s390x-gnu/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -477,10 +477,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-openharmony-arm64')
-        const bindingPackageVersion = require('tree-sitter-highlight-openharmony-arm64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-openharmony-arm64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-openharmony-arm64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -493,10 +493,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-openharmony-x64')
-        const bindingPackageVersion = require('tree-sitter-highlight-openharmony-x64/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-openharmony-x64')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-openharmony-x64/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -509,10 +509,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('tree-sitter-highlight-openharmony-arm')
-        const bindingPackageVersion = require('tree-sitter-highlight-openharmony-arm/package.json').version
-        if (bindingPackageVersion !== '1.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@master-hash/tree-sitter-highlight-openharmony-arm')
+        const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-openharmony-arm/package.json').version
+        if (bindingPackageVersion !== '1.2.3' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -646,16 +646,16 @@ if (!nativeBinding || forceWasi) {
     let candidateError = null
     let candidateFailed = false
     try {
-      candidateError = __napiWasiResolveCandidate('tree-sitter-highlight-wasm32-wasi', true, undefined)
+      candidateError = __napiWasiResolveCandidate('@master-hash/tree-sitter-highlight-wasm32-wasi', true, undefined)
       candidateFailed = candidateError !== null
       if (!candidateFailed) {
         if (process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          const bindingPackageVersion = require('tree-sitter-highlight-wasm32-wasi/package.json').version
-          if (bindingPackageVersion !== '1.1.2') {
-            throw new Error(`WASI binding package version mismatch, expected 1.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const bindingPackageVersion = require('@master-hash/tree-sitter-highlight-wasm32-wasi/package.json').version
+          if (bindingPackageVersion !== '1.2.3') {
+            throw new Error(`WASI binding package version mismatch, expected 1.2.3 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
         }
-        wasiBinding = require('tree-sitter-highlight-wasm32-wasi')
+        wasiBinding = require('@master-hash/tree-sitter-highlight-wasm32-wasi')
         nativeBinding = wasiBinding
         wasiBindingLoaded = true
       }
