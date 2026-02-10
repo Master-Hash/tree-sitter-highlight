@@ -4,7 +4,9 @@ use highlight_names::{CLASS_NAMES, HIGHLIGHT_NAMES, HTML_ATTRS};
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 use std::sync::LazyLock;
-use tree_sitter_highlight::{HighlightConfiguration, HighlightEvent, Highlighter, HtmlRenderer};
+use tree_sitter_highlight::{
+    Highlight, HighlightConfiguration, HighlightEvent, Highlighter, HtmlRenderer,
+};
 
 #[napi]
 pub enum Language {
@@ -282,4 +284,115 @@ pub fn highlight_hast(code: String, language: Language) -> HastNode {
     }
 
     stack.pop().unwrap()
+}
+
+// https://github.com/shikijs/shiki/tree/main/packages/types/src/tokens.ts
+
+#[derive(Debug)]
+#[napi(object)]
+pub struct ThemedToken {
+    pub content: String,
+    pub offset: u32,
+    pub html_attrs: Option<StyleAttr>,
+}
+
+#[derive(Debug)]
+#[napi(object)]
+pub struct TokensResult {
+    pub tokens: Vec<Vec<ThemedToken>>,
+}
+
+#[derive(Debug)]
+#[napi(object)]
+pub struct StyleAttr {
+    pub style: String,
+}
+
+#[napi]
+pub fn highlight_tokens(code: String, language: Language) -> TokensResult {
+    let config = language.highlight_config();
+    let mut highlighter = Highlighter::new();
+    let code_bytes = code.as_bytes();
+
+    let highlights_events = highlighter
+        .highlight(config, code_bytes, None, None, |lang| {
+            Language::from_name(lang).map(|l| l.highlight_config())
+        })
+        .unwrap();
+
+    let mut lines: Vec<Vec<ThemedToken>> = Vec::new();
+    let mut current_line: Vec<ThemedToken> = Vec::new();
+    let mut highlight_stack: Vec<Highlight> = Vec::new();
+
+    let mut current_utf16_offset: u32 = 0;
+
+    for event in highlights_events {
+        match event.unwrap() {
+            HighlightEvent::HighlightStart(h) => {
+                highlight_stack.push(h);
+            }
+            HighlightEvent::HighlightEnd => {
+                highlight_stack.pop();
+            }
+            HighlightEvent::Source { start, end } => {
+                let content_bytes = &code_bytes[start..end];
+                let content_str = String::from_utf8_lossy(content_bytes);
+
+                let mut last_pos = 0;
+                for (i, c) in content_str.char_indices() {
+                    if c == '\n' {
+                        // 处理换行符之前的文本
+                        if i > last_pos {
+                            let text = &content_str[last_pos..i];
+                            let utf16_len = text.encode_utf16().count() as u32;
+
+                            current_line.push(create_token(
+                                text.to_string(),
+                                current_utf16_offset,
+                                &highlight_stack,
+                            ));
+                            current_utf16_offset += utf16_len;
+                        }
+
+                        // 换行逻辑：结束当前行，开启新行
+                        // 注意：'\n' 占用 1 个 UTF-16 单元
+                        lines.push(std::mem::take(&mut current_line));
+                        current_utf16_offset += 1;
+                        last_pos = i + c.len_utf8();
+                    }
+                }
+
+                // 处理剩余文本
+                if last_pos < content_str.len() {
+                    let text = &content_str[last_pos..];
+                    let utf16_len = text.encode_utf16().count() as u32;
+
+                    current_line.push(create_token(
+                        text.to_string(),
+                        current_utf16_offset,
+                        &highlight_stack,
+                    ));
+                    current_utf16_offset += utf16_len;
+                }
+            }
+        }
+    }
+
+    if !current_line.is_empty() || lines.is_empty() {
+        lines.push(current_line);
+    }
+
+    TokensResult { tokens: lines }
+}
+
+fn create_token(content: String, offset: u32, stack: &[Highlight]) -> ThemedToken {
+    let html_attrs: Option<StyleAttr> = stack.last().map(|h| StyleAttr {
+        style: CLASS_NAMES[h.0].to_owned(),
+    });
+
+    ThemedToken {
+        content,
+        offset,
+        html_attrs,
+    }
 }

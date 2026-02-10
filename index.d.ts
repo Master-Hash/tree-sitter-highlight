@@ -20,6 +20,8 @@ export declare function highlight(code: string, language: Language): string
 
 export declare function highlightHast(code: string, language: Language): HastNode
 
+export declare function highlightTokens(code: string, language: Language): TokensResult
+
 export declare const enum Language {
   JS = 0,
   JSX = 1,
@@ -34,4 +36,18 @@ export declare const enum Language {
   C = 10,
   Bash = 11,
   Rust = 12
+}
+
+export interface StyleAttr {
+  style: string
+}
+
+export interface ThemedToken {
+  content: string
+  offset: number
+  htmlAttrs?: StyleAttr
+}
+
+export interface TokensResult {
+  tokens: Array<Array<ThemedToken>>
 }
