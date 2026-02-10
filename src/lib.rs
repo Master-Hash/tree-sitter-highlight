@@ -298,7 +298,7 @@ pub fn highlight_hast(code: String, language: Language) -> HastNode {
 pub struct ThemedToken {
     pub content: String,
     pub offset: u32,
-    pub html_attrs: Option<StyleAttr>,
+    pub html_attrs: Option<ClassAttr>,
 }
 
 #[derive(Debug)]
@@ -309,8 +309,8 @@ pub struct TokensResult {
 
 #[derive(Debug)]
 #[napi(object)]
-pub struct StyleAttr {
-    pub style: String,
+pub struct ClassAttr {
+    pub class: String,
 }
 
 #[napi]
@@ -391,8 +391,8 @@ pub fn highlight_tokens(code: String, language: Language) -> TokensResult {
 }
 
 fn create_token(content: String, offset: u32, stack: &[Highlight]) -> ThemedToken {
-    let html_attrs: Option<StyleAttr> = stack.last().map(|h| StyleAttr {
-        style: CLASS_NAMES[h.0].to_owned(),
+    let html_attrs: Option<ClassAttr> = stack.last().map(|h| ClassAttr {
+        class: CLASS_NAMES[h.0].to_owned(),
     });
 
     ThemedToken {
