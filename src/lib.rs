@@ -187,6 +187,11 @@ impl Language {
 }
 
 #[napi]
+pub fn from_alias(name: String) -> Option<Language> {
+    Language::from_name(&name)
+}
+
+#[napi]
 pub fn highlight(code: String, language: Language) -> String {
     let config = language.highlight_config();
     let mut highlighter = Highlighter::new();

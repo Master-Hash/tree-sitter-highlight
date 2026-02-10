@@ -702,7 +702,8 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { highlight, highlightHast, highlightTokens, Language } = nativeBinding
+const { fromAlias, highlight, highlightHast, highlightTokens, Language } = nativeBinding
+export { fromAlias }
 export { highlight }
 export { highlightHast }
 export { highlightTokens }
